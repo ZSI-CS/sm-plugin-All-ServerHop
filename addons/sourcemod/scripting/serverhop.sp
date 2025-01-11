@@ -254,7 +254,7 @@ public int MenuConfirmHandler(Menu menu, MenuAction action, int param1, int para
 		if (g_cvarBroadcastHops.BoolValue) {
 			char clientName[MAX_NAME_LENGTH];
 			GetClientName(param1, clientName, sizeof(clientName));
-			CPrintToChatAll("{blue}[{aqua}ZSI-hop{blue}] {blue}%t", "HopNotification", clientName, g_sServer[param1]);
+			CPrintToChatAll("{blue}[{aqua}ZSI-Server-Hop{blue}] {blue}%t", "HopNotification", clientName, g_sServer[param1]);
 		}
 	}
 	g_sAddress[param1][0] = '\0';
@@ -306,7 +306,7 @@ public void Advertise() {
 	}
 
 	if (strlen(g_sServerInfo[g_iAdvertCount]) > 0) {
-		CPrintToChatAll("{blue}[{aqua}ZSI-hop{blue}] {blue}%t", "Advert", g_sServerInfo[g_iAdvertCount], trigger);
+		CPrintToChatAll("{blue}[{aqua}ZSI-Server-Hop{blue}] {blue}%t", "Advert", g_sServerInfo[g_iAdvertCount], trigger);
 
 		if (++g_iAdvertCount >= g_iServerCount) {
 			g_iAdvertCount = 0;
